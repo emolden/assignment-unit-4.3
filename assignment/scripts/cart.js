@@ -106,6 +106,22 @@ console.log('Test isFull', isFull());
     //Use Array.indexOf to find the index of the first matching item in the basket.
     //Use Array.splice to remove the first matching item from the basket.
     //Return the item removed or null if the item was not found
+basket = [one,two,three,four];
+
+    function removeItem (string) {
+        console.log('in removeItem', string);
+        if (basket.indexOf(string) >= 0){
+            let newBasket = basket.splice(basket.indexOf(string), 1); // outputs the index number of the first item in basket that match string
+            console.log(newBasket);
+            return newBasket[0];
+        }
+        else {
+            return null;
+        }
+    }
+
+    console.log('Test removeItem - should return "two"', removeItem('two'));
+    console.log('Test removeItem - should return "null"', removeItem('five'));
 
 
 // DO NOT MODIFY
