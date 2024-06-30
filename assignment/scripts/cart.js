@@ -12,13 +12,9 @@ let basket = [];
     //return true indicating the item was added
     function isFull() {
         console.log('in isFull');
-        if (basket.length < 5) {
-            return false;
+        let checkLength = (basket.length < 5) ? false: true;
+        return checkLength;
         }
-        else {
-        return true;
-        }
-    }
 
 function addItem (item) {
     console.log('in addItem', item);
@@ -54,7 +50,7 @@ console.log('basket items', basket);
 
 function listItems() {
     console.log('in listItems');
-    for (i = 0; i<basket.length; i++) {
+    for (let i = 0; i<basket.length; i++) {
         console.log(basket[i]);
     }
     return basket;
